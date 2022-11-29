@@ -20,3 +20,8 @@ Los Angeles Galaxy
 <li>Player with the most in-game minutes: Kyle Beckerman</li>
 </ul>
 
+![image](https://user-images.githubusercontent.com/106775945/204659503-3aa7c07d-b44c-4aab-af61-f6ca76c32c82.png)
+![image](https://user-images.githubusercontent.com/106775945/204659540-9221c34e-377b-4f67-8e60-e4e61e64d18e.png)
+
+
+
