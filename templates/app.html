@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Major League Soccer Dataset</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Major League Soccer Dataset</h1>
+        <p>Use the interactive charts below to explore the dataset,</p>
+        <p>William Tecchio</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well">
+          <h5>Player:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Player Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="col-md-12" style="margin-bottom: 20px;">
+          <select id="selDataset" onchange="typeChanged(this.value)">
+            <option value="ALL">Total minutes & goals</option>
+            <option value="AVG">Average minutes & goals per game</option>
+          </select>
+          <select id="selDataset" onchange="seasonChanged(this.value)">
+            <option value="reg">Regular Season</option>
+            <option value="post">Playoffs</option>
+          </select>
+          <br />
+        </div>
+        <div class="col-md-6">
+          <div id="started"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="minutes"></div>
+        </div>
+        <div class="col-md-12" style="margin-top: 20px;">
+          <div id="goals"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h1 class="col-md-12">MLS Teams data</h1>
+    </div>
+    <div class="row" style="margin-bottom: 80px;">
+      <div class="col-md-12">
+        <select id="selDataset" onchange="teamTypeChanged(this.value)">
+          <option value="1st">Number of times with 1st place</option>
+          <option value="avg">Average position</option>
+        </select>
+      </div>
+      <div class="col-md-12">
+        <div id="clubs"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h1>League data</h1>
+    </div>
+    <div class="row" style="margin-bottom: 40px;">
+      <div class="col-md-12">
+        <div id="years"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{url_for('static', filename='js/app.js')}}"></script>
+</body>
+
+</html>
