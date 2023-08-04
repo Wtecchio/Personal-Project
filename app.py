@@ -4,9 +4,9 @@ import json
 from bson import json_util, ObjectId
 
 import pymongo
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+myclient = pymongo.MongoClient("mongodb+srv://Wtecchio:qVJSb65YN9EoVXkD@mls.ephufvg.mongodb.net/")
 
-mydb = myclient["mls"]
+mydb = myclient["MLS"]
 
 server = Flask(__name__)
 
