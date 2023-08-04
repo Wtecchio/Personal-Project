@@ -91,6 +91,6 @@ def goalsByYear():
     return json.loads(json_util.dumps(res))
 
 
-#if __name__ == "__main__":
-    #app.run()
+if __name__ == '__main__':
+    server.run(debug=True)
 
